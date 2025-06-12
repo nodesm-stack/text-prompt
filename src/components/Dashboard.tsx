@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import OptimizedPromptBox from './OptimizedPromptBox';
 
 const CopyIcon = () => (
     <svg width="20" height="20" fill="none" viewBox="0 0 24 24">
@@ -29,7 +30,7 @@ const Dashboard: React.FC = () => {
         setLoading(true);
         setError('');
         try {
-            const response = await fetch('http://127.0.0.1:5000/api/optimize', {
+            const response = await fetch('http://127.0.0.1:5050/api/gemini', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -259,7 +260,19 @@ const Dashboard: React.FC = () => {
                                 </div>
                             </>
                         ) : (
-                            <>{optimizedPrompt}</>
+                            optimizedPrompt ? (
+                              <pre style={{
+                                whiteSpace: 'pre-wrap',
+                                wordBreak: 'break-word',
+                                fontFamily: 'inherit',
+                                background: 'none',
+                                border: 'none',
+                                margin: 0,
+                                padding: 0
+                              }}>
+                                {optimizedPrompt}
+                              </pre>
+                            ) : null
                         )}
                     </div>
                 </div>

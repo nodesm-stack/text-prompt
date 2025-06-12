@@ -1,0 +1,36 @@
+.optimized-prompt-box {
+  background: #f9f9fc;
+  border-radius: 12px;
+  padding: 2rem;
+  max-height: 70vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.opb-heading {
+  color: #2a5d84;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.opb-list-item {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+.opb-paragraph {
+  margin-bottom: 1em;
+}
+
+.opb-strong {
+  color: #1a3a5b;
+}
+
+.opb-code {
+  background: #eaeaea;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
